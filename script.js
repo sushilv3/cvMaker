@@ -33,8 +33,64 @@ function addNewAqField(){
 
     aqObj.insertBefore(newAqNode,aqAddBtnObj);
 
-
-
-
-
 }
+
+// generating cv
+
+function generateCV(){
+    // console.log("generate cv function called");
+
+    let nameField = document.getElementById("nameField").value;
+
+    let nameT1 = document.getElementById("nameT1");
+    nameT1.innerHTML = nameField;
+   
+    // second way
+    document.getElementById("nameT2").innerHTML = nameField;
+
+    document.getElementById("contactT").innerHTML = document.getElementById("contactField").value
+    
+    document.getElementById("addressT").innerHTML = document.getElementById("addressField").value
+
+    document.getElementById("fbT").innerHTML = document.getElementById("fbField").value;
+
+    document.getElementById("insT").innerHTML = document.getElementById("instaField").value;
+
+    document.getElementById("linkedT").innerHTML = document.getElementById("linkedField").value;
+   
+    document.getElementById("objectiveT").innerHTML = document.getElementById("objectiveField").value;
+
+//   WE
+
+let wes = document.getElementsByClassName("weField");
+
+let str = '';
+
+for (let e of wes){
+    str = str + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("weT").innerHTML = str;
+
+//aq
+
+let aqs = document.getElementsByClassName("aqField");
+
+let str1 = '';
+
+for (let e of aqs){
+    str1 = str1 + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("aqT").innerHTML = str1;
+
+    document.getElementById("cv-form").style.display="none";
+    document.getElementById("cv-template").style.display="block";
+}
+
+// print cv
+
+function printCV(){
+    window.print();
+}
+
