@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>CV Maker</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-2">CV Generator</h1>
+        <p class="text-center">By KodeCamp.com</p>
+        <div class="row">
+            <div class="col-md-6">
+                 <!-- first col -->
+                <h3>Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="nameField" >Your Name</label>
+                    <input type="text" name="" placeholder="Enter here" id="nameField" class="form-control">
+                </div>
+
+
+                <div class="form-group mt-2">
+                    <label for="contactField" >Your Contact</label>
+                    <input type="text" name="" placeholder="Enter here" id="contactField" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addresstField" >Your Address</label>
+                    <textarea name="" rows="2" placeholder="Enter here" id="addressField" class="form-control"> </textarea>
+                </div>
+
+                <p class="text-secondary mt-4">Important Links</p>
+                
+                <div class="form-group mt-2">
+                    <label for="fbField" >Facebook</label>
+                    <input type="text" name="" placeholder="Enter here" id="fbField" class="form-control">
+                </div>
+                
+                <div class="form-group mt-2">
+                    <label for="instaField" >Instagram</label>
+                    <input type="text" name="" placeholder="Enter here" id="instaField" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="linkedField" >LinkedIn</label>
+                    <input type="text" name="" placeholder="Enter here" id="linkedField" class="form-control">
+                </div>
+               
+            </div>
+            <div class="col-md-6">
+                   <!--second col  -->
+                <h3>Professional Information</h3>
+
+                <div class="form-group mt-2">
+                    <label for="" >Objective</label>
+                    <textarea name="" rows="3" placeholder="Enter here" class="form-control"> </textarea>
+
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="" >Work Experience</label>
+                    <textarea name="" rows="2" placeholder="Enter here" class="form-control weField"> </textarea>
+                   
+                    <!-- new textArea dynemically -->
+                   
+                    <div class="container text-center mt-2 " id="weAddBtn">
+                        <button onclick= "addNewWorkEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="" >Academic Qualifications</label>
+                    <textarea name="" rows="2" placeholder="Enter here" class="form-control aqField"> </textarea>
+                   
+                    <div class="container text-center mt-2" id="aqAddBtn">
+                        <button onclick= "addNewAqField()" onclick="addNewAqField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+
+             
+            </div>
+        </div>
+
+            <div class="container text-center mt-3">
+                <button class="btn btn-primary btn-lg">Generate CV</button>
+            </div>
+
+    </div>
+   
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
